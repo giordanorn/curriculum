@@ -22,44 +22,32 @@
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 
-%----------------------------------------------------------------------------------------
-
 \begin{document}
 
 %----------------------------------------------------------------------------------------
 %	TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-    
-    % If your name is very short, use just one of the lines below
-    % If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Giordano}}}}} % First name
-    
-    \hspace{30pt} \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Vicente}}}}} % Last name
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{-\baselineskip}
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Giordano}}}}}
+    \hspace{30pt} \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Vicente}}}}}
     
     \vspace{6pt}
-    
-    % {\huge Web App Architect} % Career or current job title
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-    
-    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-    % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-    \icon{MapMarker}{12}{Natal - RN}\\
-    %\icon{Phone}{12}{+55 (xx) xxxxx-xxxx}\\
-    \icon{At}{12}{\href{mailto:giordanovofr@gmail.com}{giordanovofr@gmail.com}}\\	
+\begin{minipage}[t]{0.275\textwidth}
+    \vspace{-\baselineskip}
+
+    \icon{MapMarker}{12}{Natal -- RN}\\
+    \icon{At}{12}{\href{mailto:xxxxxxxxxxxx@xxxxx.xxx}{xxxxxxxxxxxx@xxxxx.xxx}}\\	
     \icon{Institution}{12}{\href{https://ufrn.br}{IMD -- UFRN}}\\
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
+\begin{minipage}[t]{0.275\textwidth}
+    \vspace{-\baselineskip}
     
-    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-    % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-    \icon{Globe}{12}{\href{https://giordanorn.github.io}{giordanorn.github.io}}\\
-    \icon{Github}{12}{\href{https://github.com/giordanorn}{github.com/giordanorn}}\\
+    %\icon{Globe}{12}{\href{https://giordanorn.github.io}{giordanorn.github.io}}\\
+    \icon{Phone}{12}{+55 (xx) xxxxx-xxxx}\\
+    \icon{Github}{12}{\href{https://github.com/giordanorn}{giordanorn}}\\
     \icon{Linkedin}{12}{\href{https://www.linkedin.com/in/giordano-vicente/}{giordano-vicente}}\\
 \end{minipage}
 
@@ -69,38 +57,21 @@
 %	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
-\cvsect{Sobre mim}
 
-\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-    Me chamo Giordano, atualmente estou gradu\-ando no Bacharelado em Tecnologia da Informação (BTI) pela Universidade Federal do Rio Grande do Norte (UFRN).\\
+\cvsect{Sobre mim}
+\begin{minipage}[t]{1\textwidth}
+    \vspace{0.05em}
+    Me chamo Giordano, atualmente estou gradu\-ando no Bacharelado em Tecnologia da Informação (BTI) pela Universidade Federal do Rio Grande do Norte (UFRN).
     Adoro interagir com as pessoas, passar e receber conhecimentos. Também adoro hackear e programar. Sou aspirante a cientista da computação, matemático, filósofo e músico.\\
 \end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-    \cvsect{Habilidades Técnicas}
-    \begin{barchart}{5.5}
-        \baritem{JavaScript}{55}
-        \baritem{SASS}{50}
-        \baritem{Git}{80}
-        \baritem{Linux}{70}
-        \baritem{C}{60}
-        \baritem{Haskell}{30}
-        \baritem{\LaTeX{}}{80}
-    \end{barchart}
+
+\cvsect{Habilidades Técnicas}
+\begin{minipage}[t]{1\textwidth}
+    \vspace{0.05em}
+    Possuo experiência profissional em Desenvolvimento Web Front-End com HTML5, JavaScript (Vue.js) e CSS (SASS). Além de Git e UNIX. Programação em C e Haskell. Bastante experiência em \TeX{} e \LaTeX{}.
 \end{minipage}
 
-%\begin{center}
-%    \bubbles{5/a, 6/b, 4/c, 3/d, 1/e}
-%\end{center}
-
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\cvsect{Experiência Profissional}
-
+\cvsect{Atuação Profissional}
 \begin{entrylist}
     \entry
         {1/2018 -- 8/2018}
@@ -120,7 +91,7 @@
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\cvsect{Experiência Acadêmica}
+\cvsect{Atuação Acadêmica}
 
 \begin{entrylist}
     \entry
@@ -136,6 +107,12 @@
         {UFRN}
         {Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Monitor das disciplinas:\\
         \texttt{IMD1001 - MATEMÁTICA ELEMENTAR}}
+    \entry
+        {1/2019 -- atual}
+        {Organização da produção colaborativa do material textual escrito em \LaTeX{}.\\
+            \footnotesize{Projeto de Pesquisa}}
+        {UFRN}
+        {Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Plano de trabalho do projeto intitulado ``Uso da Khan Academy como prática auxiliar de ensino da disciplina Matemática Elementar do IMD''}
     \entry
         {8/2018 -- 12/2018}
         {Projeto de monitoria FMCn\\
@@ -163,7 +140,7 @@
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\cvsect{Educação}
+\cvsect{Formação Acadêmica}
 
 \begin{entrylist}
     \entry
@@ -183,8 +160,8 @@
 
     \cvsect{Idiomas}
     
-    \textbf{Português} - nativo\\
-    \textbf{Inglês} - razoável\\
+    \textbf{Português} - nativo;\\
+    \textbf{Inglês} - falo e compreendo bem.\\
 \end{minipage}
 % \hfill
 % \begin{minipage}[t]{0.3\textwidth}
