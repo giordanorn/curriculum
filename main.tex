@@ -1,185 +1,111 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Template
-% Version 1.0 (28/1/19)
-%
-% This template originates from:
-% http://www.LaTeXTemplates.com
-%
-% Authors:
-% Jan Vorisek (jan@vorisek.me)
-% Based on a template by Jan Küster (info@jankuester.com)
-% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[9pt]{developercv}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
 
-\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\firstname{Giordano}
+\lastname{Vicente}
+
+\email{\href{mailto:xxxxxxx@xxxxx.xxx}{xxxxxxx@xxxxx.xxx}}
+\phone{+55 (xx) xxxxx-xxxx}
+\location{xxxxxxx -- xx, xxxxxx. \\xx. xxxxx CEP: xxxxx-xxx}
+
+\website{\href{https://giordanorn.github.io}{giordanorn.github.io}}
+\github{\href{https://github.com/giordanorn}{giordanorn}}
+\linkedin{\href{https://www.linkedin.com/in/giordano-vicente/}{giordano-vicente}}
+
 
 \begin{document}
+	\maketitle
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{0.45\textwidth}
-    \vspace{-\baselineskip}
-    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Giordano}}}}}
-    \hspace{30pt} \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Vicente}}}}}
-    
-    \vspace{6pt}
-\end{minipage}
-\begin{minipage}[t]{0.275\textwidth}
-    \vspace{-\baselineskip}
-
-    \icon{MapMarker}{12}{Natal -- RN}\\
-    \icon{At}{12}{\href{mailto:xxxxxxxxxxxx@xxxxx.xxx}{xxxxxxxxxxxx@xxxxx.xxx}}\\	
-    \icon{Institution}{12}{\href{https://ufrn.br}{IMD -- UFRN}}\\
-\end{minipage}
-\begin{minipage}[t]{0.275\textwidth}
-    \vspace{-\baselineskip}
-    
-    %\icon{Globe}{12}{\href{https://giordanorn.github.io}{giordanorn.github.io}}\\
-    \icon{Phone}{12}{+55 (xx) xxxxx-xxxx}\\
-    \icon{Github}{12}{\href{https://github.com/giordanorn}{giordanorn}}\\
-    \icon{Linkedin}{12}{\href{https://www.linkedin.com/in/giordano-vicente/}{giordano-vicente}}\\
-\end{minipage}
-
-\vspace{0.5cm}
-
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
-%----------------------------------------------------------------------------------------
+	\cvsect{Sobre mim}
+	\begin{minipage}[t]{1\textwidth}
+		Me chamo Giordano, atualmente estou gradu\-ando no Bacharelado em Tecnologia da Informação (BTI) pela Universidade Federal do Rio Grande do Norte (UFRN).
+		Adoro interagir com as pessoas, passar e receber conhecimentos. Também adoro hackear e programar. Sou aspirante a cientista da computação, matemático, filósofo e músico.
+	\end{minipage}
+	
+	\cvsect{Habilidades Técnicas}
+	\begin{minipage}[t]{1\textwidth}
+		Possuo experiência profissional em Desenvolvimento Web Front-End com HTML5, JavaScript (Vue.js) e CSS (SASS). Além de Git e UNIX. Programação em C e Haskell. Bastante experiência em \TeX{} e \LaTeX{}.
+	\end{minipage}
 
 
-\cvsect{Sobre mim}
-\begin{minipage}[t]{1\textwidth}
-    \vspace{0.05em}
-    Me chamo Giordano, atualmente estou gradu\-ando no Bacharelado em Tecnologia da Informação (BTI) pela Universidade Federal do Rio Grande do Norte (UFRN).
-    Adoro interagir com as pessoas, passar e receber conhecimentos. Também adoro hackear e programar. Sou aspirante a cientista da computação, matemático, filósofo e músico.\\
-\end{minipage}
+	\cvsect{Atuação Profissional}
+	\begin{entrylist}
+		\entry
+			{1/2018 -- 8/2018}
+			{Desenvolvimento Web Front-End\\
+				\footnotesize{Estágio}}
+			{\href{https://www.info.ufrn.br/}{Superintendência de Informática da UFRN (SINFO)}}
+			{Responsável pelo desenvolvimento e manutenção de sites relacionados à UFRN.
+				Competências e tecnologias envolvidas: HTML5 (Pug), JavaScript (Vue.js), CSS (SASS), Git e SCRUM.}
+		\entry
+			{12/2016 -- 3/2017}
+			{Suporte de Informática\\
+				\footnotesize{Estágio}}
+			{\href{http://unirn.edu.br/}{Centro Universitário do Rio Grande do Norte (UNI-RN)}}
+			{Responsável pela manutenção e suporte de sistemas operacionais dos laboratórios de estudo da UNI-RN.
+				Competências e tecnologias envolvidas: FOG e Linux.}
+	\end{entrylist}
 
-\cvsect{Habilidades Técnicas}
-\begin{minipage}[t]{1\textwidth}
-    \vspace{0.05em}
-    Possuo experiência profissional em Desenvolvimento Web Front-End com HTML5, JavaScript (Vue.js) e CSS (SASS). Além de Git e UNIX. Programação em C e Haskell. Bastante experiência em \TeX{} e \LaTeX{}.
-\end{minipage}
 
-\cvsect{Atuação Profissional}
-\begin{entrylist}
-    \entry
-        {1/2018 -- 8/2018}
-        {Desenvolvimento Web Front-End\\
-            \footnotesize{Estágio}}
-        {Superintendência de Informática da UFRN (SINFO)}
-        {\texttt{HTML5}\slashsep\texttt{Vue.js}\slashsep\texttt{SASS}\slashsep\texttt{Git}\slashsep\texttt{SCRUM}}
-    \entry
-        {12/2016 -- 3/2017}
-        {Suporte de Informática\\
-            \footnotesize{Estágio}}
-        {Centro Universitário do Rio Grande do Norte (UNI-RN)}
-        {\texttt{FOG}\slashsep\texttt{Linux}}
-\end{entrylist}
+	\cvsect{Atuação Acadêmica}
+	\begin{entrylist}
+		\entry
+			{12/2019}
+			{Oficina de Introdução ao \LaTeX{}\\
+				\footnotesize{{Projeto de Extensão}}}
+			{(UFRN)}
+			{Ofertatada durante o evento ``III WGIIfE - Workshop do Grupo Interdisciplinar de estudos e pesquisas em Informática na Educação'' como uma oficina aberta aos participantes.}
+		\entry
+			{3/2019 -- 12/2019}
+			{Monitoria de Matemática Elementar\\
+				\footnotesize{Projeto de Ensino}}
+			{(UFRN)}
+			{Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Monitor das disciplinas:\\
+				\texttt{IMD1001 - MATEMÁTICA ELEMENTAR}}
+		\entry
+			{1/2019 -- atual}
+			{Organização da produção colaborativa do material textual escrito em \LaTeX{}.\\
+				\footnotesize{Projeto de Pesquisa}}
+			{(UFRN)}
+			{Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Plano de trabalho do projeto intitulado ``Uso da Khan Academy como prática auxiliar de ensino da disciplina Matemática Elementar do IMD''.}
+		\entry
+			{8/2018 -- 12/2018}
+			{Projeto de monitoria FMCn\\
+				\footnotesize{Projeto de Ensino}}
+			{(UFRN)}
+			{Orientado pelo Prof. Dr. Athanasios Tsouanas. Monitor das disciplinas:\\
+				\texttt{IMD0028 - FUNDAMENTOS MATEMÁTICOS DA COMPUTAÇÃO I};\\
+				\texttt{IMD0038 - FUNDAMENTOS MATEMÁTICOS DA COMPUTAÇÃO II}.}
+		\entry
+			{7/2018}
+			{Minicurso de Introdução à Lógica Clássica Proposicional e Técnicas de Demonstração Matemática\\
+				\footnotesize{{Projeto de Extensão}}}
+			{(UFRN)}
+			{}
+		\entry
+			{4/2018 -- 12/2018}
+			{Monitoria de Matemática Elementar\\
+				\footnotesize{Projeto de Ensino}}
+			{(UFRN)}
+			{Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Monitor das disciplinas:\\
+				\texttt{IMD1001 - MATEMÁTICA ELEMENTAR}.}
+	\end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
 
-\cvsect{Atuação Acadêmica}
+	\cvsect{Formação Acadêmica}
+	\begin{entrylist}
+		\entry
+			{2015 - atual}
+			{Bacharelado em Tecnologia da Informação\\
+				\footnotesize{Graduação}}
+			{(UFRN)}
+			{}
+	\end{entrylist}
 
-\begin{entrylist}
-    \entry
-        {12/2019}
-        {Oficina de Introdução ao \LaTeX{}\\
-            \footnotesize{{Projeto de Extensão}}}
-        {UFRN}
-        {Ofertatado durante o III WGIIfE - Workshop do Grupo Interdisciplinar de estudos e pesquisas em Informática na Educação como uma oficina aberta aos participantes do evento.}
-    \entry
-        {3/2019 -- 12/2019}
-        {Monitoria de Matemática Elementar\\
-            \footnotesize{Projeto de Ensino}}
-        {UFRN}
-        {Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Monitor das disciplinas:\\
-        \texttt{IMD1001 - MATEMÁTICA ELEMENTAR}}
-    \entry
-        {1/2019 -- atual}
-        {Organização da produção colaborativa do material textual escrito em \LaTeX{}.\\
-            \footnotesize{Projeto de Pesquisa}}
-        {UFRN}
-        {Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Plano de trabalho do projeto intitulado ``Uso da Khan Academy como prática auxiliar de ensino da disciplina Matemática Elementar do IMD''}
-    \entry
-        {8/2018 -- 12/2018}
-        {Projeto de monitoria FMCn\\
-            \footnotesize{Projeto de Ensino}}
-        {UFRN}
-        {Orientado pelo Prof. Dr. Athanasios Tsouanas. Monitor das disciplinas:\\
-            \texttt{IMD0028 - FUNDAMENTOS MATEMÁTICOS DA COMPUTAÇÃO I};\\
-            \texttt{IMD0038 - FUNDAMENTOS MATEMÁTICOS DA COMPUTAÇÃO II}.}
-    \entry
-        {7/2018}
-        {Minicurso de Introdução à Lógica Clássica Proposicional e Técnicas de Demonstração Matemática\\
-            \footnotesize{{Projeto de Extensão}}}
-        {UFRN}
-        {}
-    \entry
-        {4/2018 -- 12/2018}
-        {Monitoria de Matemática Elementar\\
-            \footnotesize{Projeto de Ensino}}
-        {UFRN}
-        {Orientado pelo Prof. MSc. Antonio Igor Silva de Oliveira. Monitor das disciplinas:\\
-            \texttt{IMD1001 - MATEMÁTICA ELEMENTAR}.}
-\end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\cvsect{Formação Acadêmica}
-
-\begin{entrylist}
-    \entry
-        {2015 -- atual}
-        {Bacharelado em Tecnologia da Informação\\
-            \footnotesize{Graduação}}
-        {UFRN}
-        {Ingresso no semestre 2015.2.}
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{0.3\textwidth}
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-
-    \cvsect{Idiomas}
-    
-    \textbf{Português} - nativo;\\
-    \textbf{Inglês} - falo e compreendo bem.\\
-\end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.3\textwidth}
-%     \vspace{-\baselineskip} % Required for vertically aligning minipages
-    
-%     \cvsect{Hobbies}
-    
-%     I love... \lorem
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.3\textwidth}
-%     \vspace{-\baselineskip} % Required for vertically aligning minipages
-    
-%     \cvsect{Non profit}
-    
-%     I help... \lorem
-% \end{minipage}
-
-%----------------------------------------------------------------------------------------
-
+	\cvsect{Idiomas}
+	\begin{minipage}[t]{1\textwidth}
+		\textbf{Português} - Nativo;\\
+		\textbf{Inglês} - Falo e compreendo bem.
+	\end{minipage}
 \end{document}

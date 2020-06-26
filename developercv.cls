@@ -34,7 +34,7 @@
 
 \setlength{\parindent}{0mm} % Suppress paragraph indentation
 
-\usepackage[hidelinks]{hyperref} % Required for links but hide the default boxes around links
+\usepackage{hyperref} % Required for links but hide the default boxes around links
 
 \newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.} % Dummy text
 
@@ -84,7 +84,7 @@
 \newcommand{\icon}[3]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	\vcenteredhbox{\colorbox{black}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}% Icon and box
 	\hspace{0.2cm}% Whitespace
-	\vcenteredhbox{\textcolor{black}{#3}}% Text
+	\parbox{\textwidth}{#3}
 }
 
 %----------------------------------------------------------------------------------------
@@ -171,7 +171,9 @@
 % Command to output section title headings
 \newcommand{\cvsect}[1]{% The only parameter is the section text
 	\vspace{\baselineskip} % Whitespace before the section title
-	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}\\% Section title
+	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}% Section title
+	\par
+	\vspace{.25\baselineskip}
 }
 
 %----------------------------------------------------------------------------------------
@@ -186,16 +188,18 @@
 
 % Environment to hold a new list of entries
 \newenvironment{entrylist}{
+	\vspace{.25\baselineskip}
 	\begin{longtable}[H]{l l}
 }{
 	\end{longtable}
 }
 
 \newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-	\parbox[t]{0.175\textwidth}{% 17.5% of the text width of the page
-		#1 % Leftmost entry date(s) text
-	}%
-	&\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
+	\parbox[t]{0.15\textwidth}{% 17.5% of the text width of the page
+		\raggedleft \small{#1} % Leftmost entry date(s) text
+	}
+	\hspace{1pt}
+	\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
 		\textbf{#2}% Entry heading text
 		\hfill% Horizontal whitespace
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
@@ -204,3 +208,53 @@
 
 % Command to output a separator slash between lists, e.g. '  /  '
 \newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
+
+
+
+
+\newcommand*{\firstname}{\gdef\@firstname}
+\newcommand*{\lastname}{\gdef\@lastname}
+\newcommand*{\email}{\gdef\@email}
+\newcommand*{\location}{\gdef\@location}
+\newcommand*{\website}{\gdef\@website}
+\newcommand*{\phone}{\gdef\@phone}
+\newcommand*{\github}{\gdef\@github}
+\newcommand*{\linkedin}{\gdef\@linkedin}
+
+\newcommand{\hideempty}[2]{
+	\setbox0=\hbox{#1\unskip}\ifdim\wd0=0pt
+	\else
+		#2
+	\fi
+}
+
+% Make commands optional
+\email{}
+\location{}
+\phone{}
+\website{}
+\github{}
+\linkedin{}
+
+\def\iconsize{14}
+
+\renewcommand*{\maketitle}{%
+	\begin{minipage}[t]{.40\textwidth}
+		\vspace{-\baselineskip}
+		\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{\@firstname}}}}}\\
+		\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{\@lastname}}}}}
+	\end{minipage}
+	\begin{minipage}[t]{.30\textwidth}
+		\vspace{-\baselineskip}
+		\hideempty{\@email}{\icon{At}{\iconsize}{{\@email}}\\}
+		\hideempty{\@phone}{\icon{Phone}{\iconsize}{\@phone}\\}
+		\hideempty{\@email}{\icon{MapMarker}{\iconsize}{\@location}}
+	\end{minipage}
+	\begin{minipage}[t]{.30\textwidth}
+		\vspace{-\baselineskip}
+		\hideempty{\@website}{\icon{Globe}{\iconsize}{\@website}\\}
+		\hideempty{\@github}{\icon{Github}{\iconsize}{\@github}\\}
+		\hideempty{\@linkedin}{\icon{Linkedin}{\iconsize}{\@linkedin}}
+	\end{minipage}
+	\vspace{\baselineskip}
+}
