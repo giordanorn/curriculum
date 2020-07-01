@@ -4,7 +4,7 @@
 #
 
 # Ignora o próprio documento em pdf
-main.pdf
+cv.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
