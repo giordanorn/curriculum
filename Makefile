@@ -6,7 +6,7 @@ pdf:
 	latexmk -pdf
 
 view:
-	latexmk -pdf -pv
+	latexmk -pdf -pv &
 
 clean:
 	latexmk -c
